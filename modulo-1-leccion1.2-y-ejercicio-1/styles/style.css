@@ -1,0 +1,24 @@
+h1{
+    text-align: center; /*Centrar el título*/
+}
+table{
+    width: 100%; /* Así la tabla se amplía hasta el 100% de la anchura disponible, y aprovecha mejor el espacio */
+    border: 2px solid black ; /*Ancho del borde (px), la forma de la línea (solid, dashed, dotted) y el color*/
+}
+caption{
+    caption-side: bottom; /*Indica el lado donde quieres que esté el caption*/
+}
+
+th{
+    width: 10%; /*La anchura de las celdas de la tabla es de un 10% */
+    text-align: center ; /* Sirve para alinear el texto, en este caso dentro de las celdas, puede ser al centro,derecha o izquierda*/
+    border: 1px solid black ;
+    padding: 1%; /*El padding establece el espacio de relleno. Es el espacio entre el contenido del elemento y su borde*/
+    background-color: #2c8353 ;
+}
+td{
+    width: 10% ; /*La anchura de las celdas de la tabla es de un 10% */
+    text-align: center ; /* Sirve para alinear el texto, en este caso dentro de las celdas, puede ser al centro,derecha o izquierda*/
+    border: 1px solid black ;
+    background-color: #3cb371 ;
+}
