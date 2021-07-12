@@ -1,6 +1,12 @@
 .links {
     color: red;
 }
+.FL{
+    color:pink;
+}
 a{
     color: palegreen;
+}
+.SL{
+    background-color: grey;
 }
