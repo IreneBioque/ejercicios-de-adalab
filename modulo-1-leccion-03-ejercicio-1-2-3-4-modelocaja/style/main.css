@@ -1,0 +1,44 @@
+mark {
+  color: red;
+  background-color: pink;
+}
+.caja {
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
+  display: inline-block;
+}
+.astronauta {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+}
+.imagen {
+  background-color: tomato;
+}
+
+#ejercicio-4 {
+  background-color: teal;
+  display: inline-block;
+}
+.ParrafoPerro {
+  display: inline-block;
+}
+.perro {
+  display: block;
+}
+.ejercicio-5 {
+  background-color: violet;
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  box-sizing: border-box;
+  margin: auto;
+  border: 2px solid;
+}
+.arroz {
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  border: 5px;
+}
