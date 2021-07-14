@@ -1,0 +1,26 @@
+.item {
+  background-color: blueviolet;
+  font-size: 30px;
+  text-align: center;
+}
+
+.container {
+  background-color: burlywood;
+}
+
+/* flex */
+
+.container {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+  /* flex-direction: column; */
+
+  /* flex-direction, para declarar cual es el eje principañ (row-horizontal, column- vertical) */
+}
+
+.item {
+  box-sizing: border-box;
+  border: 2px solid black;
+}
