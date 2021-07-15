@@ -1,0 +1,34 @@
+.item {
+  box-sizing: border-box;
+}
+
+.item-1 {
+  height: 300px;
+  width: 300px;
+  margin: 40px;
+  padding: 30px;
+  background-color: black;
+  position: relative;
+  left: 100px;
+  top: 50px;
+}
+.item-2 {
+  height: 300px;
+  width: 300px;
+  margin: 40px;
+  padding: 30px;
+  background-color: pink;
+  position: relative;
+  right: 150px;
+  bottom: 320px;
+}
+.item-3 {
+  height: 300px;
+  width: 300px;
+  margin: 40px;
+  padding: 30px;
+  background-color: cadetblue;
+  position: relative;
+  left: 180px;
+  bottom: 240px;
+}
