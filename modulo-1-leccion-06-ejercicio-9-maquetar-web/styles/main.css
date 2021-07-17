@@ -1,0 +1,98 @@
+.title-header {
+  background-color: gray;
+  font-size: 40px;
+  font-weight: bold;
+}
+.menu {
+  background-color: green;
+}
+.article {
+  background-color: greenyellow;
+}
+
+.title-main {
+  font-size: 30px;
+  font-weight: bold;
+}
+.aside {
+  background-color: grey;
+}
+.title-aside {
+  font-size: 20px;
+  font-weight: bold;
+}
+@media all and (min-width: 480px) {
+  /* .body {
+    background-color: gray;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-around;
+  } */
+
+  .title-header {
+    font-size: 30px;
+    font-weight: bold;
+    float: left;
+    width: 100%;
+  }
+  .menu {
+    background-color: green;
+    float: left;
+    width: 25%;
+    height: 25%;
+    margin-top: 5%;
+    margin-right: 10%;
+  }
+  .div-main {
+    float: right;
+    width: 75%;
+    position: relative;
+    bottom: 50px;
+    padding: 0 10px;
+  }
+  .article {
+    background-color: greenyellow;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .title-main {
+    font-size: 30px;
+    font-weight: bold;
+    width: 100%;
+  }
+  .aside {
+    background-color: grey;
+  }
+  .title-aside {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .molestia {
+    background-color: yellow;
+    width: 200px;
+    height: 200px;
+    margin-top: 5%;
+  }
+  .p-principal {
+    max-width: 60%;
+    margin-top: 2%;
+  }
+  .body {
+    background-color: gray;
+  }
+}
+@media all and (min-width: 1000px) {
+  .div-main {
+    max-width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .aside {
+    max-width: 50%;
+  }
+}
