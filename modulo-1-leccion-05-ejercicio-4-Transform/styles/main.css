@@ -35,8 +35,7 @@ body {
 }
 
 .box--4 {
-  transform: translateY(20px);
-  transform: scale(1.5);
-  transform: rotate(0.6);
+  transform: translateY(20px) scale(1.5) rotate(0.6turn);
+
   /* transform: matrix(1.5, 0, 0, 0.6, 0); */
 }

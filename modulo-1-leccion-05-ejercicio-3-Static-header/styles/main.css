@@ -6,6 +6,7 @@
   position: fixed;
   width: 100%;
   float: left;
+  z-index: 2;
 }
 .main {
   position: absolute;
