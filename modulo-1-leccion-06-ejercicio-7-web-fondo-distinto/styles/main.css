@@ -1,0 +1,50 @@
+.margin-page {
+  margin: 0px 20px;
+}
+.title {
+  font-weight: bold;
+  font-size: 32px;
+}
+.parrafo {
+  font-size: 18px;
+  line-height: 24px;
+}
+main {
+  background-color: red;
+}
+
+@media all and (min-width: 480px) {
+  .margin-page {
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 30px;
+  }
+  .title {
+    font-weight: bold;
+    font-size: 28px;
+  }
+  .main {
+    background-color: yellow;
+  }
+  .parrafo {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+@media all and (min-width: 768px) {
+  .margin-page {
+    margin-top: 190px;
+    max-width: 750px;
+  }
+  .title {
+    font-weight: bold;
+    font-size: 42px;
+  }
+  .main {
+    background-color: green;
+  }
+  .parrafo {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
