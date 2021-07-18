@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.noticia-1 {
+  order: -1;
+  width: 100%;
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+.noticia-2 {
+  width: 50%;
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+.noticia-3 {
+  order: 1;
+  width: 50%;
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+.noticia-4 {
+  width: 50%;
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+.noticia-5 {
+  width: 50%;
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+
+.título {
+  text-align: top center;
+}
