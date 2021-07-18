@@ -1,0 +1,15 @@
+.header {
+  background-color: #a9a9a9;
+  min-height: 20%;
+  height: 5vw;
+}
+.main {
+  background-color: #696969;
+  min-height: 60%;
+  height: 90vw;
+}
+.footer {
+  background-color: #f0e68c;
+  min-height: 20%;
+  height: 5vw;
+}
