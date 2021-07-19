@@ -1,0 +1,17 @@
+:root {
+  --font-family: "Montserrat", sans-serif;
+}
+.main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.article {
+  color: #cc212a;
+  font-family: var(--font-family);
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+}
