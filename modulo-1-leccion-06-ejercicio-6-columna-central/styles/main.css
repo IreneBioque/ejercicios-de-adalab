@@ -1,6 +1,9 @@
 .margin-page {
   margin: 0px 20px;
 }
+body {
+  text-align: center;
+}
 .title {
   color: crimson;
   font-weight: bold;
