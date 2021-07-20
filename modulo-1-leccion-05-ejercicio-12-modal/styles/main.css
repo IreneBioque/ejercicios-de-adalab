@@ -1,0 +1,64 @@
+.header {
+  width: 100vw;
+  height: 10vh;
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+.h1 {
+  margin: 30px;
+}
+
+.menu-top {
+  margin: 30px;
+  width: 15%;
+}
+.ul-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.section-name {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 600px;
+  margin: auto;
+  margin-top: 3%;
+}
+.article {
+  width: 80%;
+  max-width: 600px;
+  margin: auto;
+  margin-top: 60px;
+}
+.parrafo {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+/* Esto solo si es footer no fixed */
+.footer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 600px;
+  margin: auto;
+}
+.menu-bottom {
+  margin: 30px;
+  width: 15%;
+}
+.ul-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.link {
+  margin: 3%;
+}
