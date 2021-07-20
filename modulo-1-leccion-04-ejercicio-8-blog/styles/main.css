@@ -39,6 +39,8 @@
   margin-top: 5%;
   margin-bottom: 5%;
 }
+
+/* Esto solo si es footer no fixed */
 .footer {
   width: 100%;
   display: flex;
