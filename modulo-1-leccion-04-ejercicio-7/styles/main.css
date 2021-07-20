@@ -1,0 +1,50 @@
+body {
+  width: 100%;
+  max-width: 840px;
+  margin: auto;
+}
+
+.cuadrado-gris {
+  height: 50px;
+  width: 50px;
+  border-radius: 5px;
+  background-color: lightgray;
+}
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.section-main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: start;
+  max-width: 450px;
+  line-height: 1.2;
+  align-items: center;
+}
+.contenido-principal {
+  margin: 5px;
+}
+.cuadrado-chiquito {
+  height: 35px;
+  width: 35px;
+  border-radius: 5px;
+  background-color: lightgray;
+  line-height: 35px;
+  text-align: center;
+}
+.valoraciones {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 150px;
+
+  align-items: center;
+
+  align-items: center;
+}
+.p-aside {
+  font-size: 12px;
+}
