@@ -1,0 +1,23 @@
+.container {
+  border-bottom: solid 1px gray;
+  display: flex;
+  justify-content: space-between;
+  max-width: 60vw;
+  margin: auto;
+  color: gray;
+  padding: 5px;
+}
+.link:link,
+.link:visited,
+.link:active {
+  text-decoration: none;
+  color: white;
+}
+.buttom {
+  text-align: center;
+  line-height: 20px;
+  background-color: red;
+  height: 20px;
+  width: 35px;
+  border-radius: 7px;
+}
