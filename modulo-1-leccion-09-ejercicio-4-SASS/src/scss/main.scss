@@ -11,6 +11,13 @@ $colorButton: coral;
 $Sizebutton: 60px;
 $Borderradiusbutton: 5px;
 
+@mixin botones {
+  background-color: $colorButton;
+  border-radius: $Borderradiusbutton;
+  height: $Sizebutton;
+  line-height: $Sizebutton;
+}
+
 .page__header {
   height: 75px;
   @media (min-width: 768px) {
@@ -42,12 +49,16 @@ $Borderradiusbutton: 5px;
     border-radius: 5px;
     height: 45px;
     line-height: 45px;
+    // @media (min-width: 768px) {
+    //   background-color: $colorButton;
+    //   border-radius: $Borderradiusbutton;
+    //   height: $Sizebutton;
+    //   line-height: $Sizebutton;
+    // }
     @media (min-width: 768px) {
-      background-color: $colorButton;
-      border-radius: $Borderradiusbutton;
-      height: $Sizebutton;
-      line-height: $Sizebutton;
+      @include botones();
     }
+
     &--2 {
       background-color: red;
       border-radius: 5px;
