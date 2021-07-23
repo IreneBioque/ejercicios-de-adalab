@@ -7,7 +7,8 @@
 @import "layout/footer";
 @import "pages/index";
 
-$colorButton: coral;
+$colorButton: lighten(#6b717f, 20%);
+// $colorButton: #6b717f;
 $Sizebutton: 60px;
 $Borderradiusbutton: 5px;
 
@@ -18,15 +19,6 @@ $Borderradiusbutton: 5px;
   line-height: $Sizebutton;
 }
 
-.page__header {
-  height: 75px;
-  @media (min-width: 768px) {
-    height: 100px;
-  }
-  @media (min-width: 1280px) {
-    height: 110px;
-  }
-}
 .article1 {
   display: flex;
   flex-direction: row;
