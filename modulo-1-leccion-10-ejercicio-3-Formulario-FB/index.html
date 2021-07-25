@@ -8,151 +8,160 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="formulario">
-      <h1>Create an account</h1>
-      <h2>It's free and always will be</h2>
-      <fieldset>
-        <legend>Datos personales</legend>
-        <label for="firstName">Nombre</label>
-        <input
-          type="text"
-          id="firstName"
-          name="firstName"
-          placeholder="Nombre"
-        />
-        <label for="Surname">Apellido</label>
-        <input type="text" id="Surname" name="Surname" placeholder="Apellido" />
-        <label for="emailAdress">E-mail</label>
-        <input
-          type="email"
-          id="emailAdress"
-          name="emailAdress"
-          placeholder="email"
-        />
-        <label for="confirmation"></label>
-        <input
-          type="email"
-          type="tel"
-          id="confirmation"
-          name="confirmation"
-          placeholder="Re-enter email or mobile number"
-        />
-        <label for="password">password</label>
-        <input
-          type="password"
-          id="password"
-          name="password"
-          placeholder="escribe tu contraseña"
-        />
-        <label for="altura">Altura</label>
-        <input
-          type="number"
-          id="altura"
-          name="altura"
-          min="50"
-          max="250"
-          value="150"
-          placeholder="escribe tu altura en cm"
-        />
-      </fieldset>
-
-      <fieldset>
-        <legend>Birthday</legend>
-        <label for="dia">Day</label>
-        <select name="dia" id="dia">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-          <option value="9">9</option>
-          <option value="10">10</option>
-          <option value="11">11</option>
-          <option value="12">12</option>
-          <option value="13">13</option>
-          <option value="14">14</option>
-          <option value="15">15</option>
-          <option value="16">16</option>
-          <option value="17">17</option>
-          <option value="18">18</option>
-          <option value="19">19</option>
-          <option value="20">20</option>
-          <option value="21">21</option>
-          <option value="22">22</option>
-          <option value="23">23</option>
-          <option value="24">24</option>
-          <option value="25">25</option>
-          <option value="26">26</option>
-          <option value="27">27</option>
-          <option value="28">28</option>
-          <option value="29">29</option>
-          <option value="30">30</option>
-          <option value="31">31</option>
-        </select>
-        <label for="mes">month</label>
-        <select name="mes" id="mes">
-          <option value="enero">Enero</option>
-          <option value="febrero">Febrero</option>
-          <option value="marzo">Marzo</option>
-          <option value="abril">Abril</option>
-          <option value="mayo">Mayo</option>
-          <option value="junio">Junio</option>
-          <option value="julio">Julio</option>
-          <option value="agosto">Agosto</option>
-          <option value="septiembre">Septiembre</option>
-          <option value="octubre">Octubre</option>
-          <option value="noviembre">Noviembre</option>
-          <option value="diciembre">Diciembre</option>
-        </select>
-        <label for="año">Año</label>
-        <select name="año" id="año">
-          <option value="1990">1990</option>
-          <option value="1991">1991</option>
-          <option value="1992">1992</option>
-          <option value="1993">1993</option>
-          <option value="1994">1994</option>
-          <option value="1995">1995</option>
-          <option value="1996">1996</option>
-          <option value="1997">1997</option>
-          <option value="1998">1998</option>
-          <option value="1999">1999</option>
-          <option value="2000">2000</option>
-        </select>
-      </fieldset>
-
-      <fieldset>
-        <legend>Genero</legend>
-        <!-- tiene que tener el mismo name, si no hace que se puedan seleccionar todas las opciones -->
-        <label for="mujer">
-          <input type="radio" id="mujer" name="genero" value="mujer" />mujer
+    <form action="/signup" method="post">
+      <div class="formulario">
+        <h1>Create an account</h1>
+        <h2>It's free and always will be</h2>
+        <fieldset>
+          <legend>Datos personales</legend>
+          <label for="firstName">Nombre</label>
+          <input
+            type="text"
+            id="firstName"
+            name="firstName"
+            placeholder="Nombre"
+          />
+          <label for="Surname">Apellido</label>
+          <input
+            type="text"
+            id="Surname"
+            name="Surname"
+            placeholder="Apellido"
+          />
+          <label for="emailAdress">E-mail</label>
+          <input
+            type="email"
+            id="emailAdress"
+            name="emailAdress"
+            placeholder="email"
+          />
+          <label for="confirmation"></label>
+          <input
+            type="email"
+            type="tel"
+            id="confirmation"
+            name="confirmation"
+            placeholder="Re-enter email or mobile number"
+          />
+          <label for="password">password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="escribe tu contraseña"
+          />
+          <label for="altura">Altura</label>
+          <input
+            type="number"
+            id="altura"
+            name="altura"
+            min="50"
+            max="250"
+            value="150"
+            placeholder="escribe tu altura en cm"
+          />
+        </fieldset>
+        <fieldset>
+          <legend>Birthday</legend>
+          <label for="dia">Day</label>
+          <select name="dia" id="dia">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+            <option value="31">31</option>
+          </select>
+          <label for="mes">month</label>
+          <select name="mes" id="mes">
+            <option value="enero">Enero</option>
+            <option value="febrero">Febrero</option>
+            <option value="marzo">Marzo</option>
+            <option value="abril">Abril</option>
+            <option value="mayo">Mayo</option>
+            <option value="junio">Junio</option>
+            <option value="julio">Julio</option>
+            <option value="agosto">Agosto</option>
+            <option value="septiembre">Septiembre</option>
+            <option value="octubre">Octubre</option>
+            <option value="noviembre">Noviembre</option>
+            <option value="diciembre">Diciembre</option>
+          </select>
+          <label for="año">Año</label>
+          <select name="año" id="año">
+            <option value="1990">1990</option>
+            <option value="1991">1991</option>
+            <option value="1992">1992</option>
+            <option value="1993">1993</option>
+            <option value="1994">1994</option>
+            <option value="1995">1995</option>
+            <option value="1996">1996</option>
+            <option value="1997">1997</option>
+            <option value="1998">1998</option>
+            <option value="1999">1999</option>
+            <option value="2000">2000</option>
+          </select>
+        </fieldset>
+        <fieldset>
+          <legend>Genero</legend>
+          <!-- tiene que tener el mismo name, si no hace que se puedan seleccionar todas las opciones -->
+          <label for="mujer">
+            <input type="radio" id="mujer" name="genero" value="mujer" />mujer
+          </label>
+          <label for="hombre">
+            <input
+              type="radio"
+              id="hombre"
+              name="genero"
+              value="hombre"
+            />hombre
+          </label>
+          <label for="otro">
+            <input type="radio" id="otro" name="genero" value="otro" />otro
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend>Comentarios</legend>
+          <label for="comments"></label>
+          <textarea name="comments" id="comments" cols="40" rows="4"></textarea>
+        </fieldset>
+        <input type="hidden" id="navegador" name="navegador" />
+        <label for="deacuero">
+          <input type="checkbox" id="deacuerdo" name="deacuerdo" required /> He
+          leido y estoy de acuerdo con los terminos y condiciones de Facebook
         </label>
-        <label for="hombre">
-          <input type="radio" id="hombre" name="genero" value="hombre" />hombre
-        </label>
-        <label for="otro">
-          <input type="radio" id="otro" name="genero" value="otro" />otro
-        </label>
-      </fieldset>
-
-      <fieldset>
-        <legend>Comentarios</legend>
-        <label for="comments"></label>
-        <textarea name="comments" id="comments" cols="40" rows="4"></textarea>
-      </fieldset>
-      <input type="hidden" id="navegador" name="navegador" />
-      <label for="deacuero">
-        <input type="checkbox" id="deacuerdo" name="deacuerdo" required /> He
-        leido y estoy de acuerdo con los terminos y condiciones de Facebook
-      </label>
-      <input type="submit" value="Create an account" class="bottom" />
-      <input
-        type="reset"
-        value="Restaurar valores por defecto"
-        class="bottom"
-      />
-    </div>
+        <input type="submit" value="Create an account" class="bottom" />
+        <input
+          type="reset"
+          value="Restaurar valores por defecto"
+          class="bottom"
+        />
+      </div>
+    </form>
   </body>
 </html>
