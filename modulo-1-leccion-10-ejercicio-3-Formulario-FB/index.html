@@ -11,46 +11,53 @@
     <div class="formulario">
       <h1>Create an account</h1>
       <h2>It's free and always will be</h2>
+      <fieldset>
+        <legend>Datos personales</legend>
+        <label for="firstName">Nombre</label>
+        <input
+          type="text"
+          id="firstName"
+          name="firstName"
+          placeholder="Nombre"
+        />
+        <label for="Surname">Apellido</label>
+        <input type="text" id="Surname" name="Surname" placeholder="Apellido" />
+        <label for="emailAdress">E-mail</label>
+        <input
+          type="email"
+          id="emailAdress"
+          name="emailAdress"
+          placeholder="email"
+        />
+        <label for="confirmation"></label>
+        <input
+          type="email"
+          type="tel"
+          id="confirmation"
+          name="confirmation"
+          placeholder="Re-enter email or mobile number"
+        />
+        <label for="password">password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="escribe tu contraseña"
+        />
+        <label for="altura">Altura</label>
+        <input
+          type="number"
+          id="altura"
+          name="altura"
+          min="50"
+          max="250"
+          value="150"
+          placeholder="escribe tu altura en cm"
+        />
+      </fieldset>
 
-      <label for="firstName">Nombre</label>
-      <input type="text" id="firstName" name="firstName" placeholder="Nombre" />
-      <label for="Surname">Apellido</label>
-      <input type="text" id="Surname" name="Surname" placeholder="Apellido" />
-      <label for="emailAdress">E-mail</label>
-      <input
-        type="email"
-        id="emailAdress"
-        name="emailAdress"
-        placeholder="email"
-      />
-      <label for="confirmation"></label>
-      <input
-        type="email"
-        type="tel"
-        id="confirmation"
-        name="confirmation"
-        placeholder="Re-enter email or mobile number"
-      />
-      <label for="password">password</label>
-      <input
-        type="password"
-        id="password"
-        name="password"
-        placeholder="escribe tu contraseña"
-      />
-      <label for="altura">Altura</label>
-      <input
-        type="number"
-        id="altura"
-        name="altura"
-        min="50"
-        max="250"
-        value="150"
-        placeholder="escribe tu altura en cm"
-      />
-
-      <div class="birthday">
-        <h3>Birthday</h3>
+      <fieldset>
+        <legend>Birthday</legend>
         <label for="dia">Day</label>
         <select name="dia" id="dia">
           <option value="1">1</option>
@@ -114,8 +121,10 @@
           <option value="1999">1999</option>
           <option value="2000">2000</option>
         </select>
-      </div>
-      <div class="genero">
+      </fieldset>
+
+      <fieldset>
+        <legend>Genero</legend>
         <!-- tiene que tener el mismo name, si no hace que se puedan seleccionar todas las opciones -->
         <label for="mujer">
           <input type="radio" id="mujer" name="genero" value="mujer" />mujer
@@ -126,14 +135,18 @@
         <label for="otro">
           <input type="radio" id="otro" name="genero" value="otro" />otro
         </label>
-      </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Comentarios</legend>
+        <label for="comments"></label>
+        <textarea name="comments" id="comments" cols="40" rows="4"></textarea>
+      </fieldset>
+      <input type="hidden" id="navegador" name="navegador" />
       <label for="deacuero">
         <input type="checkbox" id="deacuerdo" name="deacuerdo" required /> He
         leido y estoy de acuerdo con los terminos y condiciones de Facebook
       </label>
-      <label for="comments">Comentarios:</label>
-      <textarea name="comments" id="comments" cols="40" rows="4"></textarea>
-      <input type="hidden" id="navegador" name="navegador" />
       <input type="submit" value="Create an account" class="bottom" />
     </div>
   </body>
