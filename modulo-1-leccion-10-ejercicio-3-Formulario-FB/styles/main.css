@@ -16,6 +16,7 @@ select {
 
 .bottom {
   margin: auto;
+  margin-top: 10px;
   display: block;
   background-color: lightgreen;
   height: 50px;
