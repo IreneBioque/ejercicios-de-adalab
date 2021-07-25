@@ -8,106 +8,109 @@
     <title>Document</title>
   </head>
   <body>
-    <fieldset class="border">
-      <legend>Nombre</legend>
-      <label for="name"></label>
-      <input type="text" name="name" id="name" placeholder="Nombre" />
-      <label for="lastName"></label>
-      <input
-        type="text"
-        name="lastName"
-        id="lastName"
-        placeholder="Apellidos"
-      />
-    </fieldset>
-    <fieldset class="border">
-      <legend>Nombre de usuario</legend>
-      <label for="usuario"></label>
-      <input type="text" name="usuario" id="usuario" required />
-    </fieldset>
-    <fieldset class="border">
-      <legend>Contraseña</legend>
-      <label for="password"></label>
-      <input type="password" name="password" id="password" required />
-    </fieldset>
-    <fieldset class="border">
-      <legend>Confirma tu contraseña</legend>
-      <label for="confirmpassword"></label>
-      <input
-        type="password"
-        name="confirmpassword"
-        id="confirmpassword"
-        required
-      />
-    </fieldset>
-    <fieldset class="border">
-      <legend>Fecha de nacimiento</legend>
-      <label for="dia"></label>
-      <input
-        type="number"
-        name="dia"
-        id="dia"
-        min="1"
-        max="31"
-        placeholder="Día"
-        required
-      />
-      <label for="mes">Mes</label>
-      <select name="mes" id="mes" required>
-        <option value="enero">Enero</option>
-        <option value="febrero">Febrero</option>
-        <option value="marzo">Marzo</option>
-        <option value="abril">Abril</option>
-        <option value="mayo">Mayo</option>
-        <option value="junio">Junio</option>
-        <option value="julio">Julio</option>
-        <option value="agosto">Agosto</option>
-        <option value="septiembre">Septiembre</option>
-        <option value="octubre">Octubre</option>
-        <option value="noviembre">Noviembre</option>
-        <option value="diciembre">Diciembre</option>
-      </select>
-      <label for="año"></label>
-      <input
-        type="number"
-        name="año"
-        id="año"
-        min="1900"
-        max="2021"
-        placeholder="Año"
-        required
-      />
-    </fieldset>
-    <fieldset class="border">
-      <legend>Sexo</legend>
-      <label for="sexo"></label>
-      <select name="sexo" id="sexo">
-        <option value="hombre">Hombre</option>
-        <option value="mujer">Mujer</option>
-        <option value="otro">Otro</option>
-      </select>
-    </fieldset>
-    <fieldset class="border">
-      <legend>Teléfono móvil</legend>
-      <label for="telefono"></label>
-      <input type="tel" id="telefono" name="telefono" pattern="tel" required />
-    </fieldset>
-    <fieldset class="border">
-      <legend>Tu dirección de correo actual</legend>
-      <label for="email"></label>
-      <input type="email" name="email" id="email" required />
-    </fieldset>
-    <fieldset class="border">
-      <legend>Ubicación</legend>
-      <label for="ubicacion"></label>
-      <input type="text" name="ubicacion" id="ubicacion" required />
-    </fieldset>
-    <input
-      type="submit"
-      name="enviar"
-      id="enviar"
-      value="enviar"
-      class="buttom"
-    />
+    <form action="/signup" method="post">
+      <fieldset class="border">
+        <legend>Nombre</legend>
+        <label for="name"></label>
+        <input type="text" name="name" id="name" placeholder="Nombre" />
+        <label for="lastName"></label>
+        <input
+          type="text"
+          name="lastName"
+          id="lastName"
+          placeholder="Apellidos"
+        />
+      </fieldset>
+      <fieldset class="border">
+        <legend>Nombre de usuario</legend>
+        <label for="usuario"></label>
+        <input type="text" name="usuario" id="usuario" required />
+      </fieldset>
+      <fieldset class="border">
+        <legend>Contraseña</legend>
+        <label for="password"></label>
+        <input type="password" name="password" id="password" required />
+      </fieldset>
+      <fieldset class="border">
+        <legend>Confirma tu contraseña</legend>
+        <label for="confirmpassword"></label>
+        <input
+          type="password"
+          name="confirmpassword"
+          id="confirmpassword"
+          required
+        />
+      </fieldset>
+      <fieldset class="border">
+        <legend>Fecha de nacimiento</legend>
+        <label for="dia"></label>
+        <input
+          type="number"
+          name="dia"
+          id="dia"
+          min="1"
+          max="31"
+          placeholder="Día"
+          required
+        />
+        <label for="mes">Mes</label>
+        <select name="mes" id="mes" required>
+          <option value="enero">Enero</option>
+          <option value="febrero">Febrero</option>
+          <option value="marzo">Marzo</option>
+          <option value="abril">Abril</option>
+          <option value="mayo">Mayo</option>
+          <option value="junio">Junio</option>
+          <option value="julio">Julio</option>
+          <option value="agosto">Agosto</option>
+          <option value="septiembre">Septiembre</option>
+          <option value="octubre">Octubre</option>
+          <option value="noviembre">Noviembre</option>
+          <option value="diciembre">Diciembre</option>
+        </select>
+        <label for="año"></label>
+        <input
+          type="number"
+          name="año"
+          id="año"
+          min="1900"
+          max="2021"
+          placeholder="Año"
+          required
+        />
+      </fieldset>
+      <fieldset class="border">
+        <legend>Sexo</legend>
+        <label for="sexo"></label>
+        <select name="sexo" id="sexo">
+          <option value="hombre">Hombre</option>
+          <option value="mujer">Mujer</option>
+          <option value="otro">Otro</option>
+        </select>
+      </fieldset>
+      <fieldset class="border">
+        <legend>Teléfono móvil</legend>
+        <label for="telefono"></label>
+        <input
+          type="tel"
+          id="telefono"
+          name="telefono"
+          pattern="tel"
+          required
+        />
+      </fieldset>
+      <fieldset class="border">
+        <legend>Tu dirección de correo actual</legend>
+        <label for="email"></label>
+        <input type="email" name="email" id="email" required />
+      </fieldset>
+      <fieldset class="border">
+        <legend>Ubicación</legend>
+        <label for="ubicacion"></label>
+        <input type="text" name="ubicacion" id="ubicacion" required />
+      </fieldset>
+      <input type="submit" value="enviar" class="buttom" />
+      <input type="reset" value="reset" class="buttom" />
+    </form>
   </body>
 </html>
