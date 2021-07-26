@@ -1,0 +1,45 @@
+.item {
+  background-color: deeppink;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 5px;
+}
+/* Ejercicio 1 */
+
+/* .item1 {
+  grid-column: 1 / 3;
+}
+.item2 {
+  grid-column: 3 / 5;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+.item3 {
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+.item6 {
+  grid-column: 3 / 5;
+} */
+/* Ejercicio 2 */
+.item1 {
+  grid-column: span 2;
+}
+.item2 {
+  grid-column: span 2 / 5;
+  grid-row: span 2;
+}
+.item3 {
+  grid-row: span 4;
+}
+.item6 {
+  grid-column: span 2 /5;
+}
