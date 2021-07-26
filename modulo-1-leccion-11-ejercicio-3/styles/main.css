@@ -4,29 +4,32 @@
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   grid-gap: 5px;
-  /* display: flex;
+}
+.container {
+  display: flex;
   justify-content: center;
-  align-items: center; */
+  align-items: center;
+  color: white;
+  text-transform: uppercase;
 }
 .header {
   background-color: lightpink;
   grid-column: span 12;
-  height: 20vh;
+  /* height: 20vh; */
 }
 
 .menu {
   background-color: purple;
-  grid-row: span 1;
+  grid-row: span 4;
   grid-column: span 4;
-  height: 80vh;
 }
 .main {
   background-color: lightcoral;
-  grid-row: span 1;
-  grid-column: span 9/ 14;
+  grid-row: span 4;
+  grid-column: span 8;
 }
 .footer {
   background-color: lightblue;
-  grid-column: span 12;
+  grid-column: span 13;
   height: 20vh;
 }
