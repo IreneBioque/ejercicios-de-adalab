@@ -17,27 +17,26 @@ function renderTask() {
   main.innerHTML = '';
   for( const data of tasks ) {
   if( data.completed ) {
-    const html = `<li class="completed">${data.name}</li><input type="checkbox" class="js-check">`;
+    const html = `<li ><input checked type="checkbox" class="js-check"><label class="completed">${data.name}</label></li>`;
     main.innerHTML += html;
   }
   else {
-    const html = `<li>${data.name}</li><input type="checkbox" class="js-check">`;
+    const html = `<li><input type="checkbox" class="js-check"><label>${data.name}</label></li>`;
     main.innerHTML += html;
   }
  
   }
-  const button = document.querySelectorAll(".js-check");
-  console.log(button);
+  const inputs = document.querySelectorAll(".js-check");
+  for (const input of inputs) {
+      input.addEventListener('change', handleChecked());
+  }
 
 }
 
-renderTask();
-
-function checked() {
-  tasks.completed = true;
-  renderTask();
+function handleChecked(ev) {
+  const labelSister = ev.target.parentNode.querySelector('label');
+  labelSister.classList.toggle('completed');
 
 };
 
 
-button.addEventListener('change', checked());

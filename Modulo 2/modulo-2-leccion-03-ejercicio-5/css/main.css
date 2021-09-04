@@ -1,0 +1,22 @@
+.success {
+  border: 1px solid #013220;
+  background-color: #90ee90;
+  color: #013220;
+}
+.error {
+  border: 1px solid #e61919;
+  background-color: #ff4040;
+  color: #e61919;
+}
+
+.warning {
+  border: 1px solid #f8f32b;
+  background-color: #ffff40;
+  color: #f8f32b;
+}
+.div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
