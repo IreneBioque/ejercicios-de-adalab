@@ -1,15 +1,25 @@
 'use strict'
-
+const items = document.querySelector('.ul');
 const numbers = [1, 2, 3];
 const longitud = numbers.length;
 console.log(longitud);
+console.log(numbers);
 const newItem = document.createElement('li');
-const newContent = document.createTextNode(numbers[0]);
+
+function handleList() {
+    for (let number = 0; number < longitud; number++) {
+      const newContent = document.createTextNode(numbers[number]);
+        newItem.appendChild(newContent);
+    }
+    items.appendChild(newItem);
+}
+
+handleList();
 
 
-newItem.appendChild(newContent);
 
-const items = document.querySelector('.ul');
-items.appendChild(newItem);
+
+
+
 
 
