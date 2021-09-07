@@ -12,7 +12,7 @@ const validacion = users.map(user => user.isPremium);
 const names = users.map(user => user.name)
 
 
-// debugger;
+// debugger
 // for (const valida of validacion) {
 //   for (const name of names) {
 //     if (valida === true) {
