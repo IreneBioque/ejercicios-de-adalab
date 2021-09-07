@@ -7,8 +7,6 @@ const runners = [
   { name: 'Cedric Diggory', time: 28 },
   { name: 'Cho Chang', time: 35 }
 ];
-console.log(runners)
-const ganador = runners.reduce((acc, number) => acc.time = number);
-console.log(ganador);
 
-
+runners.sort((a, b) => a.time - b.time);
+console.log(runners);

@@ -8,20 +8,21 @@ const users = [
   { name: 'Inmaculada', isPremium: false }
 ];
 
-const validacion = users.map(user => user.isPremium);
-const names = users.map(user => user.name)
+console.log(users)
+
+//Para poder usar un if , usar función anónima, no una arrow
+
+const validacion = users.map(function (valida) {
+   if (valida.isPremium === true) {
+      console.log(`Hola ${valida.name}. Gracias por tu apoyo`)
+    } else {
+      console.log(`Hola ${valida.name}`)
+}
+});
 
 
-// debugger
-// for (const valida of validacion) {
-//   for (const name of names) {
-//     if (valida === true) {
-//       console.log(`Hola ${name}. Gracias por tu apoyo`)
-//     } else {
-//       console.log(`Hola ${name}`)
-//     }
-//   }
-// }
 
+
+   
+    
 console.log(validacion)
-console.log(names);
