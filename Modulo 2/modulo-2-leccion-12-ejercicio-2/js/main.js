@@ -41,7 +41,7 @@ for (const option of ciudades) {
   select.appendChild(newOption);
 }
 function handleSelect(){
-
+ 
 }
 
 select.addEventListener('change', handleSelect())
