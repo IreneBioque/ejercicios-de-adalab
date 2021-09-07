@@ -27,20 +27,43 @@ const options = document.querySelectorAll('.js_option');
 
 // handleImage();
 
+const ciudades = [
+  { name: 'Madrid',  src: ' https://viajes.nationalgeographic.com.es/medio/2021/05/12/madrid_987c90d2_1254x836.jpg',  number: ' 1' },
+  { name: 'Paris',   src: ' https://cdn2.civitatis.com/estados-unidos/nueva-york/guia/times-square-grid-m.jpg',  number: ' 2' },
+  { name: 'NewYork',src: ' https://estaticos.muyinteresante.es/media/cache/1140x_thumb/uploads/images/gallery/594a1ced5bafe85dfd3c9869/gato-romano_0.jpg', number: ' 3'},
+  
+];
+for (const option of ciudades) {
+  let newOption = document.createElement('option');
+  newOption.value = option.number;
+  const contentOption = document.createTextNode(option.name);
+  newOption.appendChild(contentOption);
+  select.appendChild(newOption);
+}
+function handleSelect(){
+
+}
+
+select.addEventListener('change', handleSelect())
+
+console.log(ciudades)
+
+ for (const ciudad of ciudades){
  // Imagen 1
   let newImage = document.createElement('img');
-  newImage.src = 'https://viajes.nationalgeographic.com.es/medio/2021/05/12/madrid_987c90d2_1254x836.jpg'
-  newImage.alt = 'Madrid'
+  newImage.src = ciudad.src;
+  newImage.alt = ciudad.name;
   image.appendChild(newImage);
 
-// Imagen 2
-  newImage = document.createElement('img');
-  newImage.src = 'https://viajes.nationalgeographic.com.es/medio/2021/05/12/madrid_987c90d2_1254x836.jpg'
-  newImage.alt = 'Madrid'
-  image.appendChild(newImage);
+// // // Imagen 2
+//    newImage = document.createElement('img');
+//    newImage.src = ciudades[1].src;
+//    newImage.alt = ciudades[1].name;
+//    image.appendChild(newImage);
   
-// Imagen 3
-  newImage = document.createElement('img');
-  newImage.src = 'https://viajes.nationalgeographic.com.es/medio/2021/05/12/madrid_987c90d2_1254x836.jpg'
-  newImage.alt = 'Madrid'
-  image.appendChild(newImage);
+//  // Imagen 3
+//    newImage = document.createElement('img');
+//    newImage.src = ciudades[2].src;
+//    newImage.alt = ciudades[2].name;
+//    image.appendChild(newImage);
+ }
