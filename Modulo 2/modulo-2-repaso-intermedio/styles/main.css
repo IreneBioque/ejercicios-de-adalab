@@ -1,0 +1,24 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.title {
+  display: flex;
+  align-items: center;
+  font-size: 100px;
+  height: 60vh;
+}
+.select {
+  border-radius: 5px;
+  height: 30px;
+  width: 100px;
+}
+.update {
+  background-color: aquamarine;
+  border-radius: 5px;
+  border: 1px black solid;
+  height: 30px;
+  width: 100px;
+}
