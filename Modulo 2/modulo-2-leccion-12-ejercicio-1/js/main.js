@@ -33,7 +33,26 @@ newItem.appendChild(newContent);
 items.appendChild(newItem);
 }
 
+// repaso entrevista
 
+for (const number of numbers){
+    // creo el li
+    let newItem = document.createElement('li');
+    // le añado una clase
+    newItem.classList.add('liclass');
+    // añado id a todos los li
+    newItem.id = 'Hola';
+    // creo una img
+    let newImage = document.createElement('img');
+    // la pongo dentro del li
+    newItem.appendChild(newImage);
+    // contenido del li
+    const newContent = document.createTextNode(number);
+    // se lo añado al li
+    newItem.appendChild(newContent);
+    // añado el li al ul
+    items.appendChild(newItem);
+    }
 
 // Me crea repetidos los Li por el bucle for
 
