@@ -1,0 +1,72 @@
+.section-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 45px;
+  background-color: #eff9ff;
+  text-align: center;
+
+  @media all and (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 40px;
+  }
+  @media all and (min-width: 1200px) {
+    padding: 0 85px;
+  }
+  &__title {
+    font-size: 24px;
+    font-family: $font-title;
+    margin-top: 30px;
+    text-transform: capitalize;
+    @media all and (min-width: 768px) {
+      grid-column: span 3;
+      font-size: 26px;
+      @media all and (min-width: 1200px) {
+        font-size: 32px;
+      }
+    }
+  }
+  &__article {
+    font-family: $font-main;
+    font-size: 18px;
+    line-height: 1.5;
+    &--title {
+      font-family: $font-title;
+      @media all and (min-width: 768px) {
+        font-size: 24px;
+      }
+    }
+    &--paragraph {
+      @media all and (min-width: 768px) {
+        font-size: 20px;
+      }
+    }
+  }
+  &__button {
+    display: block;
+    margin: auto;
+    font-family: $font-main;
+    font-size: 20px;
+    font-weight: 500;
+    color: $letter-color;
+    background-color: $button-color;
+    width: 184px;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 25px;
+    border: none;
+    margin-bottom: 60px;
+    transition: color 2s ease-in, background-color 2s ease-in, border 1s ease-in;
+    &:hover {
+      background-color: $letter-color;
+      color: $button-color;
+      border: solid 2px $button-color;
+    }
+    @media all and (min-width: 768px) {
+      grid-column: span 3;
+      width: 210px;
+    }
+    @media all and (min-width: 1200px) {
+      width: 255px;
+    }
+  }
+}

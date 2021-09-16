@@ -1,0 +1,18 @@
+// fonts
+$font-main: "Roboto", sans-serif;
+$font-title: "Roboto Slab", serif;
+
+// colors
+$button-color: #f26002;
+$letter-color: #ffffff;
+
+//arrows
+@mixin icon {
+  background-color: $letter-color;
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

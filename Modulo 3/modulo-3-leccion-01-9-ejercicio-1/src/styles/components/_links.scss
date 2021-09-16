@@ -1,0 +1,8 @@
+.footer__list--link,
+.footer__list--link:hover,
+.footer__list--link:focus,
+.footer__list--link:active {
+  text-decoration: none;
+  color: $letter-color;
+  text-transform: uppercase;
+}
