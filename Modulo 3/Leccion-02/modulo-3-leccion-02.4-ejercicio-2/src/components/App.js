@@ -1,5 +1,6 @@
-import '../styles/App.scss';
 import { useState } from 'react';
+import '../styles/App.scss';
+
 
 function App() {
   const [theme, setTheme] = useState('default');
