@@ -1,9 +1,24 @@
 import '../styles/App.scss';
+import { useState } from 'react';
 
 function App() {
+  const [theme, setTheme] = useState('default');
+  const toggleTheme = () => {
+    if (theme === 'default') {
+      setTheme('dark');
+    } else {
+      setTheme('default');
+    }
+  };
   return (
-    <div>
-     <h1>Hola mundo!</h1>
+    <div className={theme}>
+      <button onClick={toggleTheme}>Des / Activar el dark mode</button>
+      <p>Tienes activado el dark mode</p>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure vel
+        libero, at quidem nostrum dolorem. Libero obcaecati dolorum, iure, quos
+        rem hic dicta, ut consectetur quasi incidunt asperiores assumenda a.
+      </p>
     </div>
   );
 }
