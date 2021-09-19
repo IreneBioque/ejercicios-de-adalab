@@ -1,10 +1,9 @@
 import { useState } from 'react';
 import '../styles/App.scss';
 
-
 function App() {
   const [theme, setTheme] = useState('default');
-  const toggleTheme = () => {
+  const renderDarkModeText = () => {
     if (theme === 'default') {
       setTheme('dark');
     } else {
@@ -13,7 +12,7 @@ function App() {
   };
   return (
     <div className={theme}>
-      <button onClick={toggleTheme}>Des / Activar el dark mode</button>
+      <button onClick={renderDarkModeText}>Des / Activar el dark mode</button>
       <p>Tienes activado el dark mode</p>
       <p>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure vel
