@@ -5,6 +5,7 @@ function App() {
   const [open, setOpen] = useState('hidden');
   const renderHidden = () => {
     if (open === 'hidden') {
+      // debugger;
       setOpen('nohidden');
     } else {
       setOpen('hidden');
