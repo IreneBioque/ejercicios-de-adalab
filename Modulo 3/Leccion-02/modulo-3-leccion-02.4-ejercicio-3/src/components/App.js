@@ -1,9 +1,27 @@
+import { useState } from 'react';
 import '../styles/App.scss';
 
 function App() {
+  const [open, setOpen] = useState('hidden');
+  const renderHidden = () => {
+    if (open === 'hidden') {
+      setOpen('nohidden');
+    } else {
+      setOpen('hidden');
+    }
+  };
   return (
     <div>
-     <h1>Hola mundo!</h1>
+      <div onClick={renderHidden}>Menu</div>
+      <nav className={open}>
+        <div onClick={renderHidden}>Flecha</div>
+        <ul>
+          <li>A</li>
+          <li>B</li>
+          <li>C</li>
+          <li>D</li>
+        </ul>
+      </nav>
     </div>
   );
 }
