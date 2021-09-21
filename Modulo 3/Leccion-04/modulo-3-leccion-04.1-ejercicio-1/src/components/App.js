@@ -11,8 +11,6 @@ function App() {
     },
   ];
   const renderTask = () => {
-    const falses = tasks.filter((fals) => fals.completed === false);
-    console.log(falses);
     return tasks.map((task, index) => {
       return (
         <li className={task.completed ? 'done' : ''} key={index}>
