@@ -1,67 +1,67 @@
-import { useEffect, useState } from 'react';
-import '../styles/App.scss';
 // Fichero src/components/App.js
-
-import callToApi from '../services/api'; // Importamos el servicio que acabamos de crear
+import { useEffect, useState } from 'react';
+import ls from '../services/localStorage';
 
 const App = () => {
   // Estados
 
-  // Creamos characters para guardar los personajes respondidos por el API, por eso es un array vacío
-  const [characters, setCharacters] = useState([]);
-  // Creamos searchName para gestionar el input de búsqueda, por eso es un string vacío
-  const [searchName, setSearchName] = useState('');
+  // En vez de leer la propiedad name leemos la propiedad data y su valor por defecto es un objeto vacío: ls.get('data', {})
+  // Del objeto (vacío o relleno que nos devuelve ls.get) obtenemos la propiedad name: ls.get('data', {}).name
+  // Si la propiedad name existe la usamos, si no, usamos un string vacío: ls.get('data', {}).name || ''
+  const [name, setName] = useState(ls.get('data', {}).name || '');
+  // Lo mismo para el email
+  const [email, setEmail] = useState(ls.get('data', {}).email || '');
 
   // useEffect
 
+  // Usamos useEffect para guardar los datos en el local storage
   useEffect(() => {
-    // Aquí podemos poner código JS, por ejemplo podríamos llamar a callToApi dentro de un if
-
-    // Llamamos al API pasando por parámetros el searchName
-    callToApi(searchName).then((response) => {
-      // Cuando el API responde guardamos los personajes en el estado
-      setCharacters(response);
+    // En vez de guardar el nombre por un lado y el email por otro
+    // Guardamos en el local storage un objeto data con las propiedad name y email: { name: 'loquesea', email: 'loquefuere' }
+    ls.set('data', {
+      name: name,
+      email: email,
     });
-    // Este useEffect depende de searchName por eso ponemos [searchName]
-    // Cuando la usuaria cambia el searchName este useEffect se vuelve a ejecutar porque necesitamos llamar otra vez al API para obtener nuevos datos
-  }, [searchName]);
+  }, [name, email]);
 
   // Eventos
 
-  const handleSearchName = (ev) => {
-    // Cuando la usuaria cambia el input guardamos su valor en el estado
-    setSearchName(ev.target.value);
+  const handleName = (ev) => {
+    setName(ev.target.value);
   };
 
-  // Renderizado
-
-  const renderCharacters = () => {
-    // Pintamos el listado de personajes respondido por el API
-    return characters.map((character, index) => {
-      // El API no nos devuelve un id para cada personaje, por eso usamos el index que nos da el map
-      return <li key={index}>Nombre: {character.name}</li>;
-    });
+  const handleEmail = (ev) => {
+    setEmail(ev.target.value);
   };
 
   return (
     <div>
-      <h1>Llamar al API de Star Wars:</h1>
+      <h2>Usando el local storage:</h2>
 
       <form>
-        <label htmlFor='name'>
-          Busca por el nombre de tu personaje favorito:
-        </label>
+        <label htmlFor='name'>Escribe tu nombre:</label>
         <input
           type='text'
           name='name'
           id='name'
-          value={searchName}
-          onChange={handleSearchName}
+          placeholder='Maricarmen'
+          value={name}
+          onChange={handleName}
+        />
+        <label htmlFor='email'>Escribe tu email:</label>
+        <input
+          type='text'
+          name='email'
+          id='email'
+          placeholder='mari.carmen@gmail.com'
+          value={email}
+          onChange={handleEmail}
         />
       </form>
 
-      <h2>Personajes con el nombre: {searchName}</h2>
-      <ul>{renderCharacters()}</ul>
+      <h2>Tus datos son:</h2>
+      <p>Tu nombre es: {name}</p>
+      <p>Tu email es: {email}</p>
     </div>
   );
 };

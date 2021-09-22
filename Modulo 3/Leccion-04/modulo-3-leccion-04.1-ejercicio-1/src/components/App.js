@@ -1,5 +1,8 @@
 import '../styles/App.scss';
+// import { useEffect, useState } from 'react';
 
+import ls from '../services/localStorage';
+console.log(ls);
 function App() {
   const tasks = [
     { task: 'Comprar harina, jamón y pan rallado', completed: true },
@@ -19,6 +22,8 @@ function App() {
       );
     });
   };
+  // const localStorageTasks = ls.get(tasks);
+  // console.log(localStorageTasks);
   return (
     <div>
       <h1>Mi lista de tareas</h1>

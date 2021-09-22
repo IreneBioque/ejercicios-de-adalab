@@ -18,7 +18,7 @@ const App = () => {
     setSearchName(ev.target.value);
   };
 
-  const renderCharacters = () => {
+  const renderShows = () => {
     return shows.map((show, index) => {
       return <li key={index}>Nombre: {show.name}</li>;
     });
@@ -40,7 +40,7 @@ const App = () => {
       </form>
 
       <h2>Personajes con el nombre: {searchName}</h2>
-      <ul>{renderCharacters()}</ul>
+      <ul>{renderShows()}</ul>
     </div>
   );
 };
