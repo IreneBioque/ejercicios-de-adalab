@@ -13,9 +13,7 @@ function App() {
   ]);
   const handleDone = (ev) => {
     const clickedElementId = ev.currentTarget.id;
-    // const foundElement = tasks.findIndex((task) => task.id);
-    // console.log(foundElement);
-    tasks[clickedElementId].completed = ![clickedElementId].completed;
+    tasks[clickedElementId].completed = !tasks[clickedElementId].completed;
     setTasks([...tasks]);
   };
   const renderTask = () => {
