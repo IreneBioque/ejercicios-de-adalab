@@ -5,30 +5,48 @@ import data from './data.json';
 function App() {
   const [persons, setPersons] = useState(data);
   const [searchName, setSearch] = useState('');
+  const [newData, setNewData] = useState({
+    name: '',
+    lastname: '',
+    phone: '',
+    email: '',
+  });
+
   console.log(persons);
+
   const handleInput = (ev) => {
     setSearch(ev.target.value);
   };
   const handleAddPersons = (ev) => {
-    console.log(ev.target.value);
-    if (ev.target.value) {
-      const addPerson = [...persons, ev.target.value];
-      setPersons(addPerson);
-    } else {
-      const personFilter = persons.filter(
-        (person) => person !== ev.target.value
-      );
-      setPersons(personFilter);
+    if (ev.currentTarget.id === 'name') {
+      setNewData({ ...newData, name: ev.currentTarget.value });
+    } else if (ev.currentTarget.id === 'lastname') {
+      setNewData({ ...newData, lastname: ev.currentTarget.value });
+    } else if (ev.currentTarget.id === 'phone') {
+      setNewData({ ...newData, phone: ev.currentTarget.value });
+    } else if (ev.currentTarget.id === 'email') {
+      setNewData({ ...newData, email: ev.currentTarget.value });
     }
   };
   const handleClick = (ev) => {
     ev.preventDefault();
-    console.log(ev.target.value);
+    setPersons([...persons, newData]);
+    // para vaciar los inputs
+
+    // setNewData({
+    //   name: '',
+    //   lastname: '',
+    //   phone: '',
+    //   email: '',
+    // });
   };
   const renderPerson = () => {
     return persons
       .filter((person) => {
-        return person.name.toLowerCase().includes(searchName.toLowerCase());
+        return (
+          person.name.toLowerCase().includes(searchName.toLowerCase()) ||
+          person.lastname.toLowerCase().includes(searchName.toLowerCase())
+        );
       })
       .map((person, i) => {
         return (
@@ -87,6 +105,7 @@ function App() {
             type='text'
             name='name'
             id='name'
+            value={newData.name}
             placeholder='Nombre'
           />
           <input
@@ -95,6 +114,7 @@ function App() {
             type='text'
             name='lastname'
             id='lastname'
+            value={newData.lastname}
             placeholder='Apellidos'
           />
           <input
@@ -103,6 +123,7 @@ function App() {
             type='phone'
             name='phone'
             id='phone'
+            value={newData.phone}
             placeholder='Teléfono'
           />
           <input
@@ -111,6 +132,7 @@ function App() {
             type='email'
             name='email'
             id='email'
+            value={newData.email}
             placeholder='Email'
           />
           <input
