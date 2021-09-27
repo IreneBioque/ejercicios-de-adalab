@@ -1,11 +1,8 @@
 // Fichero src/components/App.js
 import { useState } from "react";
-import Preview from "./Preview";
-import InputGroupText from "./InputGroupText";
-import InputGroupSelect from "./InputGroupSelect";
-import InputGroupRadio from "./InputGroupRadio";
-import InputLegalTerms from "./InputLegalTerms";
-import Button from "./Button";
+
+import Form from "./Form";
+
 const App = () => {
   // Estados del componente
   const [name, setName] = useState("");
@@ -78,101 +75,22 @@ const App = () => {
 
   return (
     <div>
-      <form className="form" onSubmit={handleForm}>
-        <h2>Rellena tus datos para finalizar la compra:</h2>
-        <div className="form">
-          {/* name */}
-          <InputGroupText
-            labelText=" Escribe un nombre:"
-            inputName={name}
-            inputId="name"
-            inputPlaceHolder="María García"
-            inputValue={name}
-            handleChange={handleName}
-          />
-
-          {/* email */}
-          <InputGroupText
-            labelText=" Escribe un email:"
-            inputName={email}
-            inputId="email"
-            inputPlaceHolder="mariagarcia@gmail.com"
-            inputValue={email}
-            handleChange={handleEmail}
-          />
-
-          {/* region */}
-          <InputGroupSelect
-            labelText="Indica tu región:"
-            SelectName="region"
-            SelectId="region"
-            Selectvalue={region}
-            SelectOption1="España peninsular"
-            SelectOption2="Islas Canarias"
-            SelectOption3="Islas Baleares"
-            SelectOption4="Ceuta"
-            SelectOption5="Melilla"
-            handleChange={handleRegion}
-          />
-
-          {/* payment type */}
-          <label className="label-text">Indica tu método de pago:</label>
-
-          <InputGroupRadio
-            labelText="Tarjeta de crédito"
-            RadioName="paymentType"
-            RadioId="creditCard"
-            RadioValue="creditCard"
-            RadioCheked={paymentType === "creditCard"}
-            handleChange={handlePaymentType}
-          />
-
-          <InputGroupRadio
-            labelText="Efectivo"
-            RadioName="paymentType"
-            RadioId="cash"
-            RadioValue="cash"
-            RadioCheked={paymentType === "cash"}
-            handleChange={handlePaymentType}
-          />
-          <InputGroupRadio
-            labelText=" Contra reembolso"
-            RadioName="paymentType"
-            RadioId="cashOnDelivery"
-            RadioValue="cashOnDelivery"
-            RadioCheked={paymentType === "cashOnDelivery"}
-            handleChange={handlePaymentType}
-          />
-          {/* legal terms */}
-          <InputLegalTerms
-            labelText=" Debes aceptar nuestros términos legales para completar la compra:"
-            Checkname="legalTerms"
-            CheckChecked={legalTerms}
-            handleChange={handleLegalTerms}
-          />
-        </div>
-        <Preview
-          paymentType={renderPaymentTypeText()}
-          name={name}
-          email={email}
-          region={region}
-          legal={legalTerms}
-        />
-        {/* send */}
-        {/* Este botón debe estar inhabilitado mientras el formulario no sea válido */}
-        {/* <Button
-          ButtonClass="button"
-          handleChange={isValidForm() === false}
-          title="Enviar"
-        /> */}
-
-        {/* reset */}
-        <Button
-          ButtonClass="button reset"
-          handleChange={handleResetButton}
-          title="Limpiar el formulario"
-        />
-      </form>
+      <Form
+        HandleFormSubmit={handleForm}
+        InputName={name}
+        inputEmail={email}
+        handleChangeName={handleName}
+        handleChangeEmail={handleEmail}
+        inputRegion={region}
+        handleChangeRegion={handleRegion}
+        radioChecked={paymentType}
+        handleRadio={handlePaymentType}
+        checkedRadio={legalTerms}
+        handleLegal={handleLegalTerms}
+        payment={renderPaymentTypeText()}
+        handleButton={handleResetButton}
+        handleValid={isValidForm() === false}
+      />
     </div>
   );
 };

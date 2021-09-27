@@ -1,10 +1,8 @@
 const Button = (props) => {
-  const handleChangeButton = (ev) => {
-    props.handleChange(ev.target.value);
-  };
+ 
   return (
     <>
-      <button className={props.ButtonClass} onClick={handleChangeButton}>
+      <button className={props.ButtonClass} onClick={props.handleChange}>
         {props.title}
       </button>
     </>
