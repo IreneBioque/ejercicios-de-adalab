@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import '../styles/App.scss';
 import callToApi from '../services/api';
+import Form from "./Form";
 
 const App = () => {
   const [shows, setShows] = useState([]);
@@ -14,8 +15,8 @@ const App = () => {
     });
   }, [searchName]);
 
-  const handleSearchName = (ev) => {
-    setSearchName(ev.target.value);
+  const handleSearchName = (value) => {
+    setSearchName(value);
   };
 
   const renderShows = () => {
@@ -28,16 +29,7 @@ const App = () => {
     <div>
       <h1>Series</h1>
 
-      <form>
-        <label htmlFor='name'>Busca por el nombre de tu serie:</label>
-        <input
-          type='text'
-          name='name'
-          id='name'
-          value={searchName}
-          onChange={handleSearchName}
-        />
-      </form>
+      <Form valueForm={searchName} handleSearchName={handleSearchName} />
 
       <h2>Personajes con el nombre: {searchName}</h2>
       <ul>{renderShows()}</ul>

@@ -5,10 +5,10 @@ const Menu = (props) => {
         title={props.title}
         className={props.class}
         href={props.href}
-        target={props.openInNewTab === true ? '_blank' : ''}
-        rel='noreferrer'
+        target={props.openInNewTab === true ? "_blank" : ""}
+        rel="noreferrer"
       >
-        Blog
+        {props.title}
       </a>
     </li>
   );
